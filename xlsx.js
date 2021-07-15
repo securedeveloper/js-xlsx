@@ -11740,6 +11740,7 @@ function write_zip(wb, opts) {
 		coreprops: [], extprops: [], custprops: [], strs:[], comments: [], vba: [],
 		TODO:[], rels:[], xmlns: "" };
 	fix_write_opts(opts = opts || {});
+	if(typeof jszip === 'undefined') jszip = require('js'+'zip');
 	var zip = new jszip();
 	var f = "", rId = 0;
 
